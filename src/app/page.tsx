@@ -51,8 +51,9 @@ export default function Home() {
         },
       }));
       
-      // Randomly pick another color
-      const randomColor = COLORS[Math.floor(Math.random() * COLORS.length)];
+      // Randomly pick a DIFFERENT color (not the one currently selected)
+      const otherColors = COLORS.filter(c => c !== selectedColor);
+      const randomColor = otherColors[Math.floor(Math.random() * otherColors.length)];
       setSelectedColor(randomColor);
     } else if (selectedTool === "stamp") {
       const rect = e.currentTarget.getBoundingClientRect();
@@ -223,7 +224,12 @@ export default function Home() {
                   {COLORS.map((color) => (
                     <button
                       key={color}
-                      onClick={() => setSelectedColor(color)}
+                      onClick={() => {
+                        // Pick a random color that's NOT the one clicked
+                        const otherColors = COLORS.filter(c => c !== color);
+                        const randomColor = otherColors[Math.floor(Math.random() * otherColors.length)];
+                        setSelectedColor(randomColor);
+                      }}
                       className={`w-full h-12 rounded-lg border-4 border-black transform hover:scale-110 transition-transform ${
                         selectedColor === color ? "ring-4 ring-yellow-300" : ""
                       }`}
