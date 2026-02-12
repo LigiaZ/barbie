@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type Event = "Beach" | "Dinner" | "Work" | "Wedding" | null;
 type Tool = "color" | "stamp";
@@ -21,6 +21,7 @@ export default function Home() {
   const [selectedColor, setSelectedColor] = useState<string>(COLORS[0]);
   const [selectedStamp, setSelectedStamp] = useState<string>(STAMPS[0]);
   const [clothingParts, setClothingParts] = useState<Record<string, ClothingPart>>({});
+  const [glitterParticles, setGlitterParticles] = useState<{ id: number; x: number; y: number; color: string }[]>([]);
 
   const events: Event[] = ["Beach", "Dinner", "Work", "Wedding"];
 
@@ -39,6 +40,7 @@ export default function Home() {
 
   const handlePartClick = (partId: string, e: React.MouseEvent<HTMLDivElement>) => {
     if (selectedTool === "color") {
+      // Apply the selected color
       setClothingParts((prev) => ({
         ...prev,
         [partId]: {
@@ -48,6 +50,10 @@ export default function Home() {
           stamps: prev[partId]?.stamps || [],
         },
       }));
+      
+      // Randomly pick another color
+      const randomColor = COLORS[Math.floor(Math.random() * COLORS.length)];
+      setSelectedColor(randomColor);
     } else if (selectedTool === "stamp") {
       const rect = e.currentTarget.getBoundingClientRect();
       const x = ((e.clientX - rect.left) / rect.width) * 100;
@@ -76,6 +82,23 @@ export default function Home() {
     setSelectedEvent(null);
     setSelectedOutfit(0);
     setClothingParts({});
+  };
+
+  // Glitter mouse trail effect
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const newParticle = {
+      id: Date.now() + Math.random(),
+      x: e.clientX,
+      y: e.clientY,
+      color: COLORS[Math.floor(Math.random() * COLORS.length)],
+    };
+    
+    setGlitterParticles((prev) => [...prev, newParticle]);
+    
+    // Remove particle after animation
+    setTimeout(() => {
+      setGlitterParticles((prev) => prev.filter((p) => p.id !== newParticle.id));
+    }, 1000);
   };
 
   if (!selectedEvent) {
@@ -113,7 +136,28 @@ export default function Home() {
   const currentOutfits = outfits[selectedEvent] || [];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-pink-500 to-teal-400 p-4">
+    <div
+      className="min-h-screen bg-gradient-to-br from-purple-600 via-pink-500 to-teal-400 p-4"
+      onMouseMove={handleMouseMove}
+    >
+      {/* Glitter particles */}
+      {glitterParticles.map((particle) => (
+        <div
+          key={particle.id}
+          className="fixed pointer-events-none animate-glitter"
+          style={{
+            left: particle.x,
+            top: particle.y,
+            width: "8px",
+            height: "8px",
+            backgroundColor: particle.color,
+            borderRadius: "50%",
+            boxShadow: `0 0 10px ${particle.color}`,
+            animation: "glitter 1s ease-out forwards",
+          }}
+        />
+      ))}
+      
       <div className="max-w-7xl mx-auto">
         <header className="text-center mb-6">
           <h1 className="text-4xl font-black text-white retro-text-shadow">
@@ -256,6 +300,53 @@ function OutfitDisplay({
   clothingParts: Record<string, ClothingPart>;
   onPartClick: (partId: string, e: React.MouseEvent<HTMLDivElement>) => void;
 }) {
+  // Different Barbie styles based on event
+  const getBarbieStyle = () => {
+    switch (event) {
+      case "Beach":
+        return {
+          hairColor: "from-yellow-300 to-yellow-400",
+          hairBorder: "border-yellow-500",
+          skinColor: "from-amber-100 to-amber-200", // Tanned skin
+          skinBorder: "border-amber-300",
+          eyeColor: "bg-green-600 border-green-800", // Green eyes
+        };
+      case "Dinner":
+        return {
+          hairColor: "from-red-700 to-red-800",
+          hairBorder: "border-red-900",
+          skinColor: "from-pink-100 to-pink-200",
+          skinBorder: "border-pink-300",
+          eyeColor: "bg-blue-600 border-blue-800", // Blue eyes
+        };
+      case "Work":
+        return {
+          hairColor: "from-amber-800 to-amber-900",
+          hairBorder: "border-amber-950",
+          skinColor: "from-yellow-100 to-yellow-200",
+          skinBorder: "border-yellow-300",
+          eyeColor: "bg-amber-700 border-amber-900", // Brown eyes
+        };
+      case "Wedding":
+        return {
+          hairColor: "from-pink-200 to-pink-300",
+          hairBorder: "border-pink-400",
+          skinColor: "from-rose-100 to-rose-200",
+          skinBorder: "border-rose-300",
+          eyeColor: "bg-purple-600 border-purple-800", // Purple eyes
+        };
+      default:
+        return {
+          hairColor: "from-yellow-300 to-yellow-400",
+          hairBorder: "border-yellow-500",
+          skinColor: "from-pink-100 to-pink-200",
+          skinBorder: "border-pink-300",
+          eyeColor: "bg-blue-600 border-blue-800",
+        };
+    }
+  };
+
+  const barbieStyle = getBarbieStyle();
   const getOutfitParts = () => {
     const key = `${event}-${outfitIndex}`;
     
@@ -446,21 +537,21 @@ function OutfitDisplay({
 
   return (
     <div className="relative w-96 h-[600px] bg-white/20 rounded-3xl border-8 border-white/40 backdrop-blur-sm overflow-hidden">
-      {/* Hair - Long flowing blonde hair */}
-      <div className="absolute top-[3%] left-1/2 -translate-x-1/2 w-32 h-40 bg-gradient-to-b from-yellow-300 to-yellow-400 rounded-t-full border-4 border-yellow-500" 
+      {/* Hair - Long flowing hair with event-specific color */}
+      <div className={`absolute top-[3%] left-1/2 -translate-x-1/2 w-32 h-40 bg-gradient-to-b ${barbieStyle.hairColor} rounded-t-full border-4 ${barbieStyle.hairBorder}`}
            style={{ clipPath: "ellipse(50% 60% at 50% 40%)" }} />
-      <div className="absolute top-[15%] left-[20%] w-16 h-32 bg-gradient-to-b from-yellow-300 to-yellow-400 rounded-full border-2 border-yellow-500" 
+      <div className={`absolute top-[15%] left-[20%] w-16 h-32 bg-gradient-to-b ${barbieStyle.hairColor} rounded-full border-2 ${barbieStyle.hairBorder}`}
            style={{ transform: "rotate(-10deg)" }} />
-      <div className="absolute top-[15%] right-[20%] w-16 h-32 bg-gradient-to-b from-yellow-300 to-yellow-400 rounded-full border-2 border-yellow-500" 
+      <div className={`absolute top-[15%] right-[20%] w-16 h-32 bg-gradient-to-b ${barbieStyle.hairColor} rounded-full border-2 ${barbieStyle.hairBorder}`}
            style={{ transform: "rotate(10deg)" }} />
       
-      {/* Head - Oval face shape */}
-      <div className="absolute top-[8%] left-1/2 -translate-x-1/2 w-24 h-28 bg-gradient-to-b from-pink-100 to-pink-200 rounded-full border-4 border-pink-300" 
+      {/* Head - Oval face shape with event-specific skin tone */}
+      <div className={`absolute top-[8%] left-1/2 -translate-x-1/2 w-24 h-28 bg-gradient-to-b ${barbieStyle.skinColor} rounded-full border-4 ${barbieStyle.skinBorder}`}
            style={{ borderRadius: "50% 50% 45% 45%" }} />
       
-      {/* Eyes */}
-      <div className="absolute top-[12%] left-[40%] w-3 h-4 bg-blue-600 rounded-full border-2 border-blue-800" />
-      <div className="absolute top-[12%] right-[40%] w-3 h-4 bg-blue-600 rounded-full border-2 border-blue-800" />
+      {/* Eyes with event-specific color */}
+      <div className={`absolute top-[12%] left-[40%] w-3 h-4 rounded-full border-2 ${barbieStyle.eyeColor}`} />
+      <div className={`absolute top-[12%] right-[40%] w-3 h-4 rounded-full border-2 ${barbieStyle.eyeColor}`} />
       <div className="absolute top-[11.5%] left-[40.5%] w-1.5 h-2 bg-white rounded-full" />
       <div className="absolute top-[11.5%] right-[40.5%] w-1.5 h-2 bg-white rounded-full" />
       
@@ -476,28 +567,28 @@ function OutfitDisplay({
            style={{ borderBottomWidth: "3px" }} />
       
       {/* Neck */}
-      <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-10 h-8 bg-gradient-to-b from-pink-200 to-pink-100 border-2 border-pink-300" />
+      <div className={`absolute top-[20%] left-1/2 -translate-x-1/2 w-10 h-8 bg-gradient-to-b ${barbieStyle.skinColor} border-2 ${barbieStyle.skinBorder}`} />
       
       {/* Body - Hourglass figure */}
-      <div className="absolute top-[26%] left-1/2 -translate-x-1/2 w-20 h-28 bg-gradient-to-b from-pink-100 to-pink-200 border-4 border-pink-300" 
+      <div className={`absolute top-[26%] left-1/2 -translate-x-1/2 w-20 h-28 bg-gradient-to-b ${barbieStyle.skinColor} border-4 ${barbieStyle.skinBorder}`}
            style={{ clipPath: "polygon(20% 0%, 80% 0%, 100% 40%, 85% 100%, 15% 100%, 0% 40%)" }} />
       
       {/* Arms - More natural positioning */}
-      <div className="absolute top-[28%] left-[18%] w-14 h-5 bg-gradient-to-r from-pink-100 to-pink-200 rounded-full border-2 border-pink-300 -rotate-12" />
-      <div className="absolute top-[28%] right-[18%] w-14 h-5 bg-gradient-to-l from-pink-100 to-pink-200 rounded-full border-2 border-pink-300 rotate-12" />
+      <div className={`absolute top-[28%] left-[18%] w-14 h-5 bg-gradient-to-r ${barbieStyle.skinColor} rounded-full border-2 ${barbieStyle.skinBorder} -rotate-12`} />
+      <div className={`absolute top-[28%] right-[18%] w-14 h-5 bg-gradient-to-l ${barbieStyle.skinColor} rounded-full border-2 ${barbieStyle.skinBorder} rotate-12`} />
       
       {/* Hands */}
-      <div className="absolute top-[30%] left-[12%] w-4 h-5 bg-pink-100 rounded-full border-2 border-pink-300" />
-      <div className="absolute top-[30%] right-[12%] w-4 h-5 bg-pink-100 rounded-full border-2 border-pink-300" />
+      <div className={`absolute top-[30%] left-[12%] w-4 h-5 ${barbieStyle.skinColor.split(' ')[0]} rounded-full border-2 ${barbieStyle.skinBorder}`} />
+      <div className={`absolute top-[30%] right-[12%] w-4 h-5 ${barbieStyle.skinColor.split(' ')[0]} rounded-full border-2 ${barbieStyle.skinBorder}`} />
       
       {/* Legs - Positioned lower */}
-      <div className="absolute bottom-[8%] left-[36%] w-7 h-36 bg-gradient-to-b from-pink-100 to-pink-200 rounded-lg border-2 border-pink-300" />
-      <div className="absolute bottom-[8%] right-[36%] w-7 h-36 bg-gradient-to-b from-pink-100 to-pink-200 rounded-lg border-2 border-pink-300" />
+      <div className={`absolute bottom-[8%] left-[36%] w-7 h-36 bg-gradient-to-b ${barbieStyle.skinColor} rounded-lg border-2 ${barbieStyle.skinBorder}`} />
+      <div className={`absolute bottom-[8%] right-[36%] w-7 h-36 bg-gradient-to-b ${barbieStyle.skinColor} rounded-lg border-2 ${barbieStyle.skinBorder}`} />
       
       {/* Feet */}
-      <div className="absolute bottom-[6%] left-[34%] w-8 h-4 bg-pink-300 rounded-full border-2 border-pink-400" 
+      <div className={`absolute bottom-[6%] left-[34%] w-8 h-4 ${barbieStyle.skinBorder.replace('border-', 'bg-')} rounded-full border-2 ${barbieStyle.skinBorder}`}
            style={{ borderRadius: "50% 50% 40% 40%" }} />
-      <div className="absolute bottom-[6%] right-[34%] w-8 h-4 bg-pink-300 rounded-full border-2 border-pink-400" 
+      <div className={`absolute bottom-[6%] right-[34%] w-8 h-4 ${barbieStyle.skinBorder.replace('border-', 'bg-')} rounded-full border-2 ${barbieStyle.skinBorder}`}
            style={{ borderRadius: "50% 50% 40% 40%" }} />
       
       {/* Outfit Parts */}
