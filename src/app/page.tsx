@@ -12,7 +12,7 @@ interface ClothingPart {
 }
 
 const COLORS = ["#FF00FF", "#00FFFF", "#FFFF00", "#FF69B4", "#7FFF00"];
-const STAMPS = ["❤️", "⭐", "🌸"];
+const STAMPS = ["❤️", "⭐", "🌸", "🦋", "💎", "🌈", "✨", "🎀", "🌺", "💫"];
 
 export default function Home() {
   const [selectedEvent, setSelectedEvent] = useState<Event>(null);
