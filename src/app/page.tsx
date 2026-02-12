@@ -402,14 +402,14 @@ function OutfitDisplay({
             <ClothingPart
               id="swimsuit-top"
               label="Top"
-              style={{ top: "27%", left: "33%", width: "34%", height: "12%" }}
+              style={{ top: "28%", left: "32%", width: "36%", height: "14%" }}
               clothingParts={clothingParts}
               onPartClick={onPartClick}
             />
             <ClothingPart
               id="swimsuit-bottom"
               label="Bottom"
-              style={{ top: "40%", left: "36%", width: "28%", height: "10%" }}
+              style={{ top: "43%", left: "35%", width: "30%", height: "12%" }}
               clothingParts={clothingParts}
               onPartClick={onPartClick}
             />
@@ -420,7 +420,7 @@ function OutfitDisplay({
           <ClothingPart
             id="beach-dress"
             label="Dress"
-            style={{ top: "27%", left: "28%", width: "44%", height: "38%" }}
+            style={{ top: "28%", left: "27%", width: "46%", height: "42%" }}
             clothingParts={clothingParts}
             onPartClick={onPartClick}
           />
@@ -431,14 +431,14 @@ function OutfitDisplay({
             <ClothingPart
               id="surf-top"
               label="Rashguard"
-              style={{ top: "27%", left: "30%", width: "40%", height: "18%" }}
+              style={{ top: "28%", left: "29%", width: "42%", height: "20%" }}
               clothingParts={clothingParts}
               onPartClick={onPartClick}
             />
             <ClothingPart
               id="surf-shorts"
               label="Shorts"
-              style={{ top: "46%", left: "34%", width: "32%", height: "14%" }}
+              style={{ top: "49%", left: "33%", width: "34%", height: "16%" }}
               clothingParts={clothingParts}
               onPartClick={onPartClick}
             />
@@ -451,7 +451,7 @@ function OutfitDisplay({
           <ClothingPart
             id="cocktail-dress"
             label="Cocktail Dress"
-            style={{ top: "27%", left: "30%", width: "40%", height: "35%" }}
+            style={{ top: "28%", left: "29%", width: "42%", height: "38%" }}
             clothingParts={clothingParts}
             onPartClick={onPartClick}
           />
@@ -461,7 +461,7 @@ function OutfitDisplay({
           <ClothingPart
             id="evening-gown"
             label="Evening Gown"
-            style={{ top: "27%", left: "28%", width: "44%", height: "48%" }}
+            style={{ top: "28%", left: "27%", width: "46%", height: "54%" }}
             clothingParts={clothingParts}
             onPartClick={onPartClick}
           />
@@ -472,14 +472,14 @@ function OutfitDisplay({
             <ClothingPart
               id="pantsuit-top"
               label="Blazer"
-              style={{ top: "27%", left: "30%", width: "40%", height: "22%" }}
+              style={{ top: "28%", left: "29%", width: "42%", height: "24%" }}
               clothingParts={clothingParts}
               onPartClick={onPartClick}
             />
             <ClothingPart
               id="pantsuit-pants"
               label="Pants"
-              style={{ top: "50%", left: "34%", width: "32%", height: "32%" }}
+              style={{ top: "53%", left: "33%", width: "34%", height: "36%" }}
               clothingParts={clothingParts}
               onPartClick={onPartClick}
             />
@@ -493,14 +493,14 @@ function OutfitDisplay({
             <ClothingPart
               id="suit-jacket"
               label="Jacket"
-              style={{ top: "27%", left: "30%", width: "40%", height: "22%" }}
+              style={{ top: "28%", left: "29%", width: "42%", height: "24%" }}
               clothingParts={clothingParts}
               onPartClick={onPartClick}
             />
             <ClothingPart
               id="suit-skirt"
               label="Skirt"
-              style={{ top: "50%", left: "35%", width: "30%", height: "18%" }}
+              style={{ top: "53%", left: "34%", width: "32%", height: "20%" }}
               clothingParts={clothingParts}
               onPartClick={onPartClick}
             />
@@ -512,14 +512,14 @@ function OutfitDisplay({
             <ClothingPart
               id="pencil-top"
               label="Blouse"
-              style={{ top: "27%", left: "32%", width: "36%", height: "18%" }}
+              style={{ top: "28%", left: "31%", width: "38%", height: "20%" }}
               clothingParts={clothingParts}
               onPartClick={onPartClick}
             />
             <ClothingPart
               id="pencil-skirt"
               label="Pencil Skirt"
-              style={{ top: "46%", left: "35%", width: "30%", height: "24%" }}
+              style={{ top: "49%", left: "34%", width: "32%", height: "26%" }}
               clothingParts={clothingParts}
               onPartClick={onPartClick}
             />
@@ -531,14 +531,14 @@ function OutfitDisplay({
             <ClothingPart
               id="blazer"
               label="Blazer"
-              style={{ top: "27%", left: "30%", width: "40%", height: "22%" }}
+              style={{ top: "28%", left: "29%", width: "42%", height: "24%" }}
               clothingParts={clothingParts}
               onPartClick={onPartClick}
             />
             <ClothingPart
               id="work-pants"
               label="Trousers"
-              style={{ top: "50%", left: "34%", width: "32%", height: "32%" }}
+              style={{ top: "53%", left: "33%", width: "34%", height: "36%" }}
               clothingParts={clothingParts}
               onPartClick={onPartClick}
             />
@@ -551,7 +551,7 @@ function OutfitDisplay({
           <ClothingPart
             id="wedding-gown"
             label="Wedding Gown"
-            style={{ top: "27%", left: "26%", width: "48%", height: "52%" }}
+            style={{ top: "28%", left: "25%", width: "50%", height: "56%" }}
             clothingParts={clothingParts}
             onPartClick={onPartClick}
           />
@@ -561,7 +561,7 @@ function OutfitDisplay({
           <ClothingPart
             id="bridesmaid-dress"
             label="Bridesmaid Dress"
-            style={{ top: "27%", left: "28%", width: "44%", height: "45%" }}
+            style={{ top: "28%", left: "27%", width: "46%", height: "48%" }}
             clothingParts={clothingParts}
             onPartClick={onPartClick}
           />
@@ -571,7 +571,7 @@ function OutfitDisplay({
           <ClothingPart
             id="elegant-dress"
             label="Elegant Dress"
-            style={{ top: "27%", left: "30%", width: "40%", height: "42%" }}
+            style={{ top: "28%", left: "29%", width: "42%", height: "45%" }}
             clothingParts={clothingParts}
             onPartClick={onPartClick}
           />
@@ -582,59 +582,117 @@ function OutfitDisplay({
 
   return (
     <div className="relative w-96 h-[600px] bg-white/20 rounded-3xl border-8 border-white/40 backdrop-blur-sm overflow-hidden">
-      {/* Hair - Long flowing hair with event-specific color */}
-      <div className={`absolute top-[3%] left-1/2 -translate-x-1/2 w-32 h-40 bg-gradient-to-b ${barbieStyle.hairColor} rounded-t-full border-4 ${barbieStyle.hairBorder}`}
+      {/* Hair - Voluminous styled hair with event-specific color */}
+      {/* Main hair volume - top */}
+      <div className={`absolute top-[2%] left-1/2 -translate-x-1/2 w-36 h-24 bg-gradient-to-b ${barbieStyle.hairColor} rounded-t-full border-4 ${barbieStyle.hairBorder}`}
+           style={{ clipPath: "ellipse(50% 70% at 50% 30%)", zIndex: 1 }} />
+      
+      {/* Hair sides - flowing */}
+      <div className={`absolute top-[8%] left-[16%] w-20 h-40 bg-gradient-to-b ${barbieStyle.hairColor} rounded-full border-3 ${barbieStyle.hairBorder}`}
+           style={{ transform: "rotate(-15deg)", clipPath: "ellipse(45% 60% at 50% 40%)", zIndex: 0 }} />
+      <div className={`absolute top-[8%] right-[16%] w-20 h-40 bg-gradient-to-b ${barbieStyle.hairColor} rounded-full border-3 ${barbieStyle.hairBorder}`}
+           style={{ transform: "rotate(15deg)", clipPath: "ellipse(45% 60% at 50% 40%)", zIndex: 0 }} />
+      
+      {/* Hair back layer */}
+      <div className={`absolute top-[10%] left-1/2 -translate-x-1/2 w-28 h-48 bg-gradient-to-b ${barbieStyle.hairColor} rounded-full border-2 ${barbieStyle.hairBorder}`}
+           style={{ clipPath: "ellipse(50% 65% at 50% 35%)", zIndex: -1 }} />
+      
+      {/* Head - Doll-like oval face with event-specific skin tone */}
+      <div className={`absolute top-[6%] left-1/2 -translate-x-1/2 w-28 h-32 bg-gradient-to-b ${barbieStyle.skinColor} border-4 ${barbieStyle.skinBorder}`}
+           style={{ borderRadius: "50% 50% 48% 48%", zIndex: 2 }} />
+      
+      {/* Eyes - Larger, more doll-like with event-specific color */}
+      <div className={`absolute top-[10%] left-[38%] w-4 h-5 rounded-full border-2 ${barbieStyle.eyeColor}`} />
+      <div className={`absolute top-[10%] right-[38%] w-4 h-5 rounded-full border-2 ${barbieStyle.eyeColor}`} />
+      
+      {/* Eye highlights - sparkle effect */}
+      <div className="absolute top-[10%] left-[39%] w-2 h-2.5 bg-white rounded-full" />
+      <div className="absolute top-[10%] right-[39%] w-2 h-2.5 bg-white rounded-full" />
+      <div className="absolute top-[11.5%] left-[38.5%] w-1 h-1 bg-white rounded-full opacity-70" />
+      <div className="absolute top-[11.5%] right-[38.5%] w-1 h-1 bg-white rounded-full opacity-70" />
+      
+      {/* Eyelashes - more dramatic */}
+      <div className="absolute top-[9%] left-[37%] w-5 h-1.5 border-t-3 border-black rounded-full"
+           style={{ borderTopWidth: "3px" }} />
+      <div className="absolute top-[9%] right-[37%] w-5 h-1.5 border-t-3 border-black rounded-full"
+           style={{ borderTopWidth: "3px" }} />
+      
+      {/* Eyebrows */}
+      <div className="absolute top-[8%] left-[37%] w-5 h-1 bg-black rounded-full opacity-60"
+           style={{ transform: "rotate(-5deg)" }} />
+      <div className="absolute top-[8%] right-[37%] w-5 h-1 bg-black rounded-full opacity-60"
+           style={{ transform: "rotate(5deg)" }} />
+      
+      {/* Nose - delicate */}
+      <div className="absolute top-[13%] left-1/2 -translate-x-1/2 w-1.5 h-3 bg-pink-300/50 rounded-full" />
+      <div className="absolute top-[14.5%] left-1/2 -translate-x-1/2 w-2 h-1.5 bg-pink-300 rounded-full" />
+      
+      {/* Lips - fuller, more defined */}
+      <div className="absolute top-[15.5%] left-1/2 -translate-x-1/2 w-10 h-3 bg-pink-400 rounded-full border-2 border-pink-600"
            style={{ clipPath: "ellipse(50% 60% at 50% 40%)" }} />
-      <div className={`absolute top-[15%] left-[20%] w-16 h-32 bg-gradient-to-b ${barbieStyle.hairColor} rounded-full border-2 ${barbieStyle.hairBorder}`}
-           style={{ transform: "rotate(-10deg)" }} />
-      <div className={`absolute top-[15%] right-[20%] w-16 h-32 bg-gradient-to-b ${barbieStyle.hairColor} rounded-full border-2 ${barbieStyle.hairBorder}`}
-           style={{ transform: "rotate(10deg)" }} />
+      <div className="absolute top-[16%] left-1/2 -translate-x-1/2 w-9 h-2 bg-pink-500 rounded-full"
+           style={{ clipPath: "ellipse(50% 50% at 50% 60%)" }} />
       
-      {/* Head - Oval face shape with event-specific skin tone */}
-      <div className={`absolute top-[8%] left-1/2 -translate-x-1/2 w-24 h-28 bg-gradient-to-b ${barbieStyle.skinColor} rounded-full border-4 ${barbieStyle.skinBorder}`}
-           style={{ borderRadius: "50% 50% 45% 45%" }} />
+      {/* Smile line */}
+      <div className="absolute top-[16.5%] left-1/2 -translate-x-1/2 w-6 h-1 border-b-2 border-pink-700/30 rounded-full" />
       
-      {/* Eyes with event-specific color */}
-      <div className={`absolute top-[12%] left-[40%] w-3 h-4 rounded-full border-2 ${barbieStyle.eyeColor}`} />
-      <div className={`absolute top-[12%] right-[40%] w-3 h-4 rounded-full border-2 ${barbieStyle.eyeColor}`} />
-      <div className="absolute top-[11.5%] left-[40.5%] w-1.5 h-2 bg-white rounded-full" />
-      <div className="absolute top-[11.5%] right-[40.5%] w-1.5 h-2 bg-white rounded-full" />
+      {/* Neck - slender, doll-like */}
+      <div className={`absolute top-[18%] left-1/2 -translate-x-1/2 w-9 h-10 bg-gradient-to-b ${barbieStyle.skinColor} border-2 ${barbieStyle.skinBorder}`}
+           style={{ clipPath: "polygon(30% 0%, 70% 0%, 80% 100%, 20% 100%)", zIndex: 1 }} />
       
-      {/* Eyelashes */}
-      <div className="absolute top-[11%] left-[39%] w-4 h-1 border-t-2 border-black rounded-full" />
-      <div className="absolute top-[11%] right-[39%] w-4 h-1 border-t-2 border-black rounded-full" />
+      {/* Shoulders - defined structure */}
+      <div className={`absolute top-[26%] left-1/2 -translate-x-1/2 w-32 h-6 bg-gradient-to-b ${barbieStyle.skinColor} border-3 ${barbieStyle.skinBorder} rounded-t-3xl`}
+           style={{ clipPath: "polygon(0% 50%, 15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%)", zIndex: 0 }} />
       
-      {/* Nose */}
-      <div className="absolute top-[14%] left-1/2 -translate-x-1/2 w-2 h-2 bg-pink-300 rounded-full" />
+      {/* Upper Body - Barbie proportions (narrow waist, defined bust) */}
+      <div className={`absolute top-[28%] left-1/2 -translate-x-1/2 w-24 h-16 bg-gradient-to-b ${barbieStyle.skinColor} border-3 ${barbieStyle.skinBorder}`}
+           style={{ clipPath: "polygon(15% 0%, 85% 0%, 95% 50%, 85% 100%, 15% 100%, 5% 50%)", borderRadius: "20px 20px 10px 10px" }} />
       
-      {/* Smile */}
-      <div className="absolute top-[16%] left-1/2 -translate-x-1/2 w-8 h-3 border-b-3 border-pink-600 rounded-full" 
-           style={{ borderBottomWidth: "3px" }} />
+      {/* Waist - very narrow (classic Barbie) */}
+      <div className={`absolute top-[42%] left-1/2 -translate-x-1/2 w-16 h-8 bg-gradient-to-b ${barbieStyle.skinColor} border-2 ${barbieStyle.skinBorder}`}
+           style={{ clipPath: "polygon(25% 0%, 75% 0%, 70% 100%, 30% 100%)" }} />
       
-      {/* Neck */}
-      <div className={`absolute top-[20%] left-1/2 -translate-x-1/2 w-10 h-8 bg-gradient-to-b ${barbieStyle.skinColor} border-2 ${barbieStyle.skinBorder}`} />
+      {/* Hips - defined */}
+      <div className={`absolute top-[48%] left-1/2 -translate-x-1/2 w-22 h-10 bg-gradient-to-b ${barbieStyle.skinColor} border-3 ${barbieStyle.skinBorder}`}
+           style={{ clipPath: "polygon(20% 0%, 80% 0%, 90% 100%, 10% 100%)", borderRadius: "10px" }} />
       
-      {/* Body - Hourglass figure */}
-      <div className={`absolute top-[26%] left-1/2 -translate-x-1/2 w-20 h-28 bg-gradient-to-b ${barbieStyle.skinColor} border-4 ${barbieStyle.skinBorder}`}
-           style={{ clipPath: "polygon(20% 0%, 80% 0%, 100% 40%, 85% 100%, 15% 100%, 0% 40%)" }} />
+      {/* Arms - slender, positioned naturally */}
+      {/* Upper arms */}
+      <div className={`absolute top-[29%] left-[14%] w-16 h-4 bg-gradient-to-r ${barbieStyle.skinColor} rounded-full border-2 ${barbieStyle.skinBorder}`}
+           style={{ transform: "rotate(-20deg)" }} />
+      <div className={`absolute top-[29%] right-[14%] w-16 h-4 bg-gradient-to-l ${barbieStyle.skinColor} rounded-full border-2 ${barbieStyle.skinBorder}`}
+           style={{ transform: "rotate(20deg)" }} />
       
-      {/* Arms - More natural positioning */}
-      <div className={`absolute top-[28%] left-[18%] w-14 h-5 bg-gradient-to-r ${barbieStyle.skinColor} rounded-full border-2 ${barbieStyle.skinBorder} -rotate-12`} />
-      <div className={`absolute top-[28%] right-[18%] w-14 h-5 bg-gradient-to-l ${barbieStyle.skinColor} rounded-full border-2 ${barbieStyle.skinBorder} rotate-12`} />
+      {/* Forearms */}
+      <div className={`absolute top-[32%] left-[8%] w-14 h-3.5 bg-gradient-to-r ${barbieStyle.skinColor} rounded-full border-2 ${barbieStyle.skinBorder}`}
+           style={{ transform: "rotate(-35deg)" }} />
+      <div className={`absolute top-[32%] right-[8%] w-14 h-3.5 bg-gradient-to-l ${barbieStyle.skinColor} rounded-full border-2 ${barbieStyle.skinBorder}`}
+           style={{ transform: "rotate(35deg)" }} />
       
-      {/* Hands */}
-      <div className={`absolute top-[30%] left-[12%] w-4 h-5 ${barbieStyle.skinColor.split(' ')[0]} rounded-full border-2 ${barbieStyle.skinBorder}`} />
-      <div className={`absolute top-[30%] right-[12%] w-4 h-5 ${barbieStyle.skinColor.split(' ')[0]} rounded-full border-2 ${barbieStyle.skinBorder}`} />
+      {/* Hands - delicate */}
+      <div className={`absolute top-[36%] left-[6%] w-5 h-6 ${barbieStyle.skinColor.split(' ')[0]} rounded-full border-2 ${barbieStyle.skinBorder}`}
+           style={{ clipPath: "ellipse(50% 60% at 50% 40%)" }} />
+      <div className={`absolute top-[36%] right-[6%] w-5 h-6 ${barbieStyle.skinColor.split(' ')[0]} rounded-full border-2 ${barbieStyle.skinBorder}`}
+           style={{ clipPath: "ellipse(50% 60% at 50% 40%)" }} />
       
-      {/* Legs - Positioned lower */}
-      <div className={`absolute bottom-[8%] left-[36%] w-7 h-36 bg-gradient-to-b ${barbieStyle.skinColor} rounded-lg border-2 ${barbieStyle.skinBorder}`} />
-      <div className={`absolute bottom-[8%] right-[36%] w-7 h-36 bg-gradient-to-b ${barbieStyle.skinColor} rounded-lg border-2 ${barbieStyle.skinBorder}`} />
+      {/* Legs - Long and slender (classic Barbie proportions) */}
+      {/* Thighs */}
+      <div className={`absolute top-[56%] left-[38%] w-8 h-24 bg-gradient-to-b ${barbieStyle.skinColor} rounded-lg border-2 ${barbieStyle.skinBorder}`}
+           style={{ clipPath: "polygon(20% 0%, 80% 0%, 70% 100%, 30% 100%)" }} />
+      <div className={`absolute top-[56%] right-[38%] w-8 h-24 bg-gradient-to-b ${barbieStyle.skinColor} rounded-lg border-2 ${barbieStyle.skinBorder}`}
+           style={{ clipPath: "polygon(20% 0%, 80% 0%, 70% 100%, 30% 100%)" }} />
       
-      {/* Feet */}
-      <div className={`absolute bottom-[6%] left-[34%] w-8 h-4 ${barbieStyle.skinBorder.replace('border-', 'bg-')} rounded-full border-2 ${barbieStyle.skinBorder}`}
-           style={{ borderRadius: "50% 50% 40% 40%" }} />
-      <div className={`absolute bottom-[6%] right-[34%] w-8 h-4 ${barbieStyle.skinBorder.replace('border-', 'bg-')} rounded-full border-2 ${barbieStyle.skinBorder}`}
-           style={{ borderRadius: "50% 50% 40% 40%" }} />
+      {/* Calves */}
+      <div className={`absolute bottom-[8%] left-[39%] w-6 h-20 bg-gradient-to-b ${barbieStyle.skinColor} rounded-lg border-2 ${barbieStyle.skinBorder}`}
+           style={{ clipPath: "polygon(30% 0%, 70% 0%, 60% 100%, 40% 100%)" }} />
+      <div className={`absolute bottom-[8%] right-[39%] w-6 h-20 bg-gradient-to-b ${barbieStyle.skinColor} rounded-lg border-2 ${barbieStyle.skinBorder}`}
+           style={{ clipPath: "polygon(30% 0%, 70% 0%, 60% 100%, 40% 100%)" }} />
+      
+      {/* Feet - pointed (high heel position) */}
+      <div className={`absolute bottom-[6%] left-[37%] w-9 h-5 ${barbieStyle.skinBorder.replace('border-', 'bg-')} rounded-full border-2 ${barbieStyle.skinBorder}`}
+           style={{ borderRadius: "60% 40% 30% 70%", transform: "rotate(-10deg)" }} />
+      <div className={`absolute bottom-[6%] right-[37%] w-9 h-5 ${barbieStyle.skinBorder.replace('border-', 'bg-')} rounded-full border-2 ${barbieStyle.skinBorder}`}
+           style={{ borderRadius: "40% 60% 70% 30%", transform: "rotate(10deg)" }} />
       
       {/* Outfit Parts */}
       {getOutfitParts()}
@@ -663,57 +721,93 @@ function ClothingPart({
   const getClothingStyle = () => {
     const baseStyle = { ...style, backgroundColor: color };
     
-    // Dresses - A-line shape
-    if (id.includes("dress") || id.includes("gown")) {
+    // Wedding Gown - Full ball gown shape
+    if (id === "wedding-gown") {
       return {
         ...baseStyle,
-        clipPath: "polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%)",
+        clipPath: "polygon(20% 0%, 80% 0%, 85% 20%, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 15% 20%)",
+        borderRadius: "25px 25px 50px 50px",
+      };
+    }
+    
+    // Evening Gown - Elegant flowing shape
+    if (id === "evening-gown") {
+      return {
+        ...baseStyle,
+        clipPath: "polygon(22% 0%, 78% 0%, 82% 30%, 90% 70%, 95% 100%, 5% 100%, 10% 70%, 18% 30%)",
+        borderRadius: "20px 20px 45px 45px",
+      };
+    }
+    
+    // Dresses - A-line shape with fitted bodice
+    if (id.includes("dress")) {
+      return {
+        ...baseStyle,
+        clipPath: "polygon(25% 0%, 75% 0%, 78% 15%, 88% 50%, 95% 100%, 5% 100%, 12% 50%, 22% 15%)",
         borderRadius: "20px 20px 40px 40px",
       };
     }
     
-    // Tops/Blazers - Fitted at waist
+    // Tops/Blazers - Fitted at shoulders, tapered to waist
     if (id.includes("top") || id.includes("blazer") || id.includes("jacket") || id.includes("blouse")) {
       return {
         ...baseStyle,
-        clipPath: "polygon(15% 0%, 85% 0%, 95% 100%, 5% 100%)",
-        borderRadius: "15px 15px 10px 10px",
+        clipPath: "polygon(10% 0%, 90% 0%, 95% 15%, 92% 50%, 85% 100%, 15% 100%, 8% 50%, 5% 15%)",
+        borderRadius: "15px 15px 8px 8px",
       };
     }
     
-    // Skirts - Flared
+    // Pencil Skirt - Fitted, straight shape
+    if (id === "pencil-skirt") {
+      return {
+        ...baseStyle,
+        clipPath: "polygon(28% 0%, 72% 0%, 70% 100%, 30% 100%)",
+        borderRadius: "8px 8px 15px 15px",
+      };
+    }
+    
+    // Skirts - Flared A-line
     if (id.includes("skirt")) {
       return {
         ...baseStyle,
-        clipPath: "polygon(30% 0%, 70% 0%, 90% 100%, 10% 100%)",
-        borderRadius: "10px 10px 30px 30px",
+        clipPath: "polygon(28% 0%, 72% 0%, 85% 100%, 15% 100%)",
+        borderRadius: "8px 8px 25px 25px",
       };
     }
     
-    // Pants - Straight legs
-    if (id.includes("pants") || id.includes("suit-pants")) {
+    // Pants - Tailored with defined legs
+    if (id.includes("pants") || id.includes("work-pants")) {
       return {
         ...baseStyle,
-        clipPath: "polygon(20% 0%, 45% 0%, 45% 100%, 35% 100%, 35% 50%, 65% 50%, 65% 100%, 55% 100%, 55% 0%, 80% 0%, 80% 100%, 70% 100%, 70% 50%, 30% 50%, 30% 100%, 20% 100%)",
-        borderRadius: "10px",
+        clipPath: "polygon(18% 0%, 42% 0%, 43% 100%, 38% 100%, 38% 50%, 62% 50%, 62% 100%, 57% 100%, 57% 0%, 82% 0%, 82% 100%, 75% 100%, 75% 50%, 25% 50%, 25% 100%, 18% 100%)",
+        borderRadius: "8px",
       };
     }
     
-    // Shorts
-    if (id.includes("shorts") || id.includes("bottom")) {
+    // Shorts - Fitted with leg separation
+    if (id.includes("shorts")) {
       return {
         ...baseStyle,
-        clipPath: "polygon(25% 0%, 48% 0%, 48% 100%, 40% 100%, 40% 50%, 60% 50%, 60% 100%, 52% 100%, 52% 0%, 75% 0%, 75% 100%, 65% 100%, 65% 50%, 35% 50%, 35% 100%, 25% 100%)",
-        borderRadius: "10px 10px 20px 20px",
+        clipPath: "polygon(22% 0%, 45% 0%, 46% 100%, 42% 100%, 42% 50%, 58% 50%, 58% 100%, 54% 100%, 54% 0%, 78% 0%, 78% 100%, 72% 100%, 72% 50%, 28% 50%, 28% 100%, 22% 100%)",
+        borderRadius: "8px 8px 18px 18px",
       };
     }
     
-    // Swimsuit top
+    // Swimsuit bottom - Brief style
+    if (id.includes("bottom")) {
+      return {
+        ...baseStyle,
+        clipPath: "polygon(25% 10%, 75% 10%, 78% 50%, 75% 90%, 25% 90%, 22% 50%)",
+        borderRadius: "20px",
+      };
+    }
+    
+    // Swimsuit top - Bikini style
     if (id.includes("swimsuit-top")) {
       return {
         ...baseStyle,
-        clipPath: "polygon(20% 20%, 80% 20%, 70% 100%, 30% 100%)",
-        borderRadius: "30px 30px 15px 15px",
+        clipPath: "polygon(15% 25%, 85% 25%, 80% 75%, 75% 100%, 25% 100%, 20% 75%)",
+        borderRadius: "25px 25px 12px 12px",
       };
     }
     
