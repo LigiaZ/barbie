@@ -602,39 +602,39 @@ function OutfitDisplay({
            style={{ borderRadius: "50% 50% 48% 48%", zIndex: 2 }} />
       
       {/* Eyes - Larger, more doll-like with event-specific color */}
-      <div className={`absolute top-[10%] left-[38%] w-4 h-5 rounded-full border-2 ${barbieStyle.eyeColor}`} />
-      <div className={`absolute top-[10%] right-[38%] w-4 h-5 rounded-full border-2 ${barbieStyle.eyeColor}`} />
+      <div className={`absolute top-[10%] left-[38%] w-4 h-5 rounded-full border-2 ${barbieStyle.eyeColor}`} style={{ zIndex: 3 }} />
+      <div className={`absolute top-[10%] right-[38%] w-4 h-5 rounded-full border-2 ${barbieStyle.eyeColor}`} style={{ zIndex: 3 }} />
       
       {/* Eye highlights - sparkle effect */}
-      <div className="absolute top-[10%] left-[39%] w-2 h-2.5 bg-white rounded-full" />
-      <div className="absolute top-[10%] right-[39%] w-2 h-2.5 bg-white rounded-full" />
-      <div className="absolute top-[11.5%] left-[38.5%] w-1 h-1 bg-white rounded-full opacity-70" />
-      <div className="absolute top-[11.5%] right-[38.5%] w-1 h-1 bg-white rounded-full opacity-70" />
+      <div className="absolute top-[10%] left-[39%] w-2 h-2.5 bg-white rounded-full" style={{ zIndex: 4 }} />
+      <div className="absolute top-[10%] right-[39%] w-2 h-2.5 bg-white rounded-full" style={{ zIndex: 4 }} />
+      <div className="absolute top-[11.5%] left-[38.5%] w-1 h-1 bg-white rounded-full opacity-70" style={{ zIndex: 4 }} />
+      <div className="absolute top-[11.5%] right-[38.5%] w-1 h-1 bg-white rounded-full opacity-70" style={{ zIndex: 4 }} />
       
       {/* Eyelashes - more dramatic */}
       <div className="absolute top-[9%] left-[37%] w-5 h-1.5 border-t-3 border-black rounded-full"
-           style={{ borderTopWidth: "3px" }} />
+           style={{ borderTopWidth: "3px", zIndex: 4 }} />
       <div className="absolute top-[9%] right-[37%] w-5 h-1.5 border-t-3 border-black rounded-full"
-           style={{ borderTopWidth: "3px" }} />
+           style={{ borderTopWidth: "3px", zIndex: 4 }} />
       
       {/* Eyebrows */}
       <div className="absolute top-[8%] left-[37%] w-5 h-1 bg-black rounded-full opacity-60"
-           style={{ transform: "rotate(-5deg)" }} />
+           style={{ transform: "rotate(-5deg)", zIndex: 3 }} />
       <div className="absolute top-[8%] right-[37%] w-5 h-1 bg-black rounded-full opacity-60"
-           style={{ transform: "rotate(5deg)" }} />
+           style={{ transform: "rotate(5deg)", zIndex: 3 }} />
       
       {/* Nose - delicate */}
-      <div className="absolute top-[13%] left-1/2 -translate-x-1/2 w-1.5 h-3 bg-pink-300/50 rounded-full" />
-      <div className="absolute top-[14.5%] left-1/2 -translate-x-1/2 w-2 h-1.5 bg-pink-300 rounded-full" />
+      <div className="absolute top-[13%] left-1/2 -translate-x-1/2 w-1.5 h-3 bg-pink-300/50 rounded-full" style={{ zIndex: 3 }} />
+      <div className="absolute top-[14.5%] left-1/2 -translate-x-1/2 w-2 h-1.5 bg-pink-300 rounded-full" style={{ zIndex: 3 }} />
       
       {/* Lips - fuller, more defined */}
       <div className="absolute top-[15.5%] left-1/2 -translate-x-1/2 w-10 h-3 bg-pink-400 rounded-full border-2 border-pink-600"
-           style={{ clipPath: "ellipse(50% 60% at 50% 40%)" }} />
+           style={{ clipPath: "ellipse(50% 60% at 50% 40%)", zIndex: 3 }} />
       <div className="absolute top-[16%] left-1/2 -translate-x-1/2 w-9 h-2 bg-pink-500 rounded-full"
-           style={{ clipPath: "ellipse(50% 50% at 50% 60%)" }} />
+           style={{ clipPath: "ellipse(50% 50% at 50% 60%)", zIndex: 3 }} />
       
       {/* Smile line */}
-      <div className="absolute top-[16.5%] left-1/2 -translate-x-1/2 w-6 h-1 border-b-2 border-pink-700/30 rounded-full" />
+      <div className="absolute top-[16.5%] left-1/2 -translate-x-1/2 w-6 h-1 border-b-2 border-pink-700/30 rounded-full" style={{ zIndex: 3 }} />
       
       {/* Neck - slender, doll-like */}
       <div className={`absolute top-[18%] left-1/2 -translate-x-1/2 w-9 h-10 bg-gradient-to-b ${barbieStyle.skinColor} border-2 ${barbieStyle.skinBorder}`}
