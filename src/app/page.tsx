@@ -22,8 +22,22 @@ export default function Home() {
   const [selectedStamp, setSelectedStamp] = useState<string>(STAMPS[0]);
   const [clothingParts, setClothingParts] = useState<Record<string, ClothingPart>>({});
   const [glitterParticles, setGlitterParticles] = useState<{ id: number; x: number; y: number; color: string }[]>([]);
+  const [sassyMessage, setSassyMessage] = useState<string | null>(null);
 
   const events: Event[] = ["Beach", "Dinner", "Work", "Wedding"];
+  
+  const sassyMessages = [
+    "That's horrible! 💅",
+    "That's the opposite of fashion! 😱",
+    "Terrible design! 🙈",
+    "Did you even try? 😬",
+    "My eyes! MY EYES! 👀",
+    "Fashion emergency! 🚨",
+    "This is a disaster! 💔",
+    "What were you thinking?! 🤦‍♀️",
+    "I can't be seen in this! 😤",
+    "This hurts to look at! 🫣"
+  ];
 
   const outfits: Record<string, string[]> = {
     Beach: ["Swimsuit", "Beach Dress", "Surf Outfit"],
@@ -76,7 +90,14 @@ export default function Home() {
   };
 
   const handleSave = () => {
-    alert("🖨️ Printing your fabulous design! ✨");
+    // Pick a random sassy message
+    const randomMessage = sassyMessages[Math.floor(Math.random() * sassyMessages.length)];
+    setSassyMessage(randomMessage);
+    
+    // Hide message after 3 seconds
+    setTimeout(() => {
+      setSassyMessage(null);
+    }, 3000);
   };
 
   const handleReset = () => {
@@ -280,6 +301,24 @@ export default function Home() {
           {/* Main Canvas Area */}
           <div className="flex-1 retro-panel p-8 flex items-center justify-center">
             <div className="relative">
+              {/* Sassy Speech Bubble */}
+              {sassyMessage && (
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full mb-4 z-50 animate-bounce">
+                  <div className="relative bg-white border-4 border-black rounded-3xl px-6 py-4 shadow-lg">
+                    <p className="text-xl font-black text-pink-600 whitespace-nowrap">
+                      {sassyMessage}
+                    </p>
+                    {/* Speech bubble tail */}
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full">
+                      <div className="w-0 h-0 border-l-[15px] border-l-transparent border-r-[15px] border-r-transparent border-t-[20px] border-t-black"></div>
+                      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-[16px]">
+                        <div className="w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-t-[16px] border-t-white"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+              
               {/* Barbie Character with Outfit */}
               <OutfitDisplay
                 event={selectedEvent}
